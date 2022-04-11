@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+header .header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .logo {
+  font-size: 3rem;
+  color: red;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+header nav a:hover{
+  color: red;
+  transition: .3s ease all;
+}
+
+.main-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("./img/house-cards-season-5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+}
+
+.container {
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  line-height: 2rem;
+  margin-left: 15px;
+}
+
+.container h3 {
+  font-size: 5rem;
+  margin-bottom: 1%;
+}
+
+.main-content .descricao {
+  font-family: sans-serif;
+  margin-bottom: 5%;
+  font-size: 1.3rem;
+}
+
+.buttons .btn {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  border: none;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease all;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+.carousel {
+  margin: 5px auto 0 auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 700px) {
+  header .header-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  h3.film-title {
+    font-size: 3rem;
+  }
+
+  .main-content .descricao {
+    font-size: 1rem;
+  }
+
+  .buttons .btn {
+    padding: 1rem;
   }
 }
